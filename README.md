@@ -3,6 +3,7 @@ ngEkathuwa
 
 #### Angularjs Bootstrap 3 Modal service - Ekathuwa 
 ==============================================
+[Examples: ngEkathuwa](http://plnkr.co/ebDtSMw6w0IZquaglEMe) 
 
 ###### This given you to easily handle Bootstrap 3 Modal window with Angularjs.
 ###### It is more flexible...
