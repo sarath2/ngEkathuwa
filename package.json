@@ -1,0 +1,40 @@
+{
+  "name": "ekathuwa",
+  "version": "0.1.0",
+  "description": "Ekathuwa Angular Bootstrap3 modal service",
+  "keywords": [
+    "angular","bootstrap"
+  ],
+  "homepage": "https://github.com/sarath2",
+  "bugs": "https://github.com/sarath2",
+  "author": {
+    "name": "Sarath Ambegoda",
+    "email": "sarath2mail@gmail.com",
+    "url": "https://github.com/sarath2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sarath2"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "connect-livereload": "~0.2.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-open": "~0.2.2",
+    "grunt-bump": "0.0.11",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-connect": "~0.3.0",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-ngmin": "0.0.3",
+    "grunt-karma": "~0.7.0"
+  }
+}
