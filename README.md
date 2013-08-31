@@ -1,7 +1,7 @@
 ngEkathuwa
 ==========
 
-Angularjs Bootstrap 3 Modal service - Ekathuwa 
+#### Angularjs Bootstrap 3 Modal service - Ekathuwa 
 ==============================================
 
 ###### This given you to easily handle Bootstrap 3 Modal window with Angularjs.
@@ -22,17 +22,16 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
 
 
 
-#### Ekathuwa API
-=================
+#### Ekathuwa API and exampls
+=============================
 
 ##### ngEkathuwa Options
 
 <table>
     <tr>
-        <th>Option</th>
-        <th>Value</th>
-        <th>Description</th>
-        <th>Example</th>
+        <th width="10%">Option</th>
+        <th width="10%">Value</th>
+        <th width="80%">Description</th>
     </tr>
     <tr>
         <td>
@@ -43,7 +42,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
         </td>
         <td>Set your modal ID.
             <br/>Id avoid namespace collisions.Most important, when modal inside modal(nested modal)</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({id:"yourModalId"});</pre>
         </td>
     </tr>
@@ -55,7 +56,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: $rootScope</code>
         </td>
         <td>Pass your scope.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({scope:$scope});</pre>
         </td>
     </tr>
@@ -67,7 +70,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: null</code>
         </td>
         <td>Pass your controller.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({controller:"ekathuwaModalCtl"});</pre>
         </td>
     </tr>
@@ -80,7 +85,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
         </td>
         <td>Includes a modal-backdrop element. Alternatively, specify
             <code>static</code>for a backdrop which doesn't close the modal on click.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({backdrop:"static"});</pre>
         </td>
     </tr>
@@ -92,7 +99,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: true</code>
         </td>
         <td>Closes the modal when escape key is pressed</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({keyboard:false});</pre>
         </td>
     </tr>
@@ -106,7 +115,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
         <td>Set modal style.If you set
             <code>width</code>, modal not be responsive. Use "
             <code>;</code>" for style seperation.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({id:"yourModalId",contentStyle:"width:350px;heigth:400px;background-color:red;"});</pre>
         </td>
     </tr>
@@ -119,7 +130,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
         </td>
         <td>Set modal percentage(%) width. Not need to mention "%", Only need value.
             <br/>It overwrite contentStyle's width.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({id:"yourModalId",contentStyle:"width:350px;heigth:400px;background-color:#1b78f7;",contentCustomSize:80});</pre>
         </td>
     </tr>
@@ -142,7 +155,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <br/>
             <code>fl= full width</code>
         </td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({id:"yourModalId",contentStyle:"width:350px;heigth:400px;background-color:#1b78f7;",contentPreSize:'lg'});</pre>
         </td>
     </tr>
@@ -154,7 +169,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: null</code>
         </td>
         <td>Pass your HTML modal page template as URL.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaModalTempId", scope: $scope, templateURL: "./views/modal-template1.html" });</pre>
         </td>
     </tr>
@@ -166,7 +183,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: null</code>
         </td>
         <td>Pass your modal page as HTML tags. This required nessery HTML elements for show modal. Refer Bootstrap3 document.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: 'ekathuwaTemlHTMLId', scope: $scope, contentPreSize: 'fl', templateHTML:''});</pre>
         </td>
     </tr>
@@ -179,7 +198,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
         </td>
         <td>Pass your modal page's body as template URL.
             <br/>It used default header and footer.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaBodyTempLId", scope: $scope, bodyTemplateURL: './views/modal-template-body.html' });</pre>
         </td>
     </tr>
@@ -194,7 +215,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <br/>It used default header and footer. Discard when you set
             <code>bodyTemplateURL</code>
         </td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaBodyTempLHTMLId", scope: $scope, bodyTemplate: 'This is a modal body' });</pre>
         </td>
     </tr>
@@ -206,7 +229,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: true</code>
         </td>
         <td>Set modal header visible or not.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, header: false });</pre>
         </td>
     </tr>
@@ -218,7 +243,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: null</code>
         </td>
         <td>Pass your modal header as inline HTML.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, headerTemplate: 'This is a modal header' });</pre>
         </td>
     </tr>
@@ -230,7 +257,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: true</code>
         </td>
         <td>Show/Hide header close button.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, headerCloseBtn: false });</pre>
         </td>
     </tr>
@@ -242,7 +271,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: true</code>
         </td>
         <td>Set modal footer visible or not.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footer: false });</pre>
         </td>
     </tr>
@@ -254,7 +285,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: null</code>
         </td>
         <td>Pass your modal footer as inline HTML.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footerTemplate: 'This is footer' });</pre>
         </td>
     </tr>
@@ -266,7 +299,9 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: true</code>
         </td>
         <td>Show/Hide footer close button.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footerCloseBtn: false });</pre>
         </td>
     </tr>
@@ -278,11 +313,12 @@ Angularjs Bootstrap 3 Modal service - Ekathuwa
             <code>default: false</code>
         </td>
         <td>Show/Hide footer save button.</td>
-        <td>
+    </tr>
+    <tr>
+        <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footerSaveBtn: true });</pre>
         </td>
     </tr>
-    <tr></tr>
 </table>
 
 ### License
