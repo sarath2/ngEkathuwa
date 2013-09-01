@@ -11,7 +11,7 @@ angular.module('ngEkathuwa', ['ngRoute'])
     $rootScope.$ekathuwa = $ekathuwa;
 })
     .provider('$ekathuwa', function () {
-    this.$get = function ($compile, $rootScope, $document, $timeout) {
+    this.$get = function ($compile, $rootScope, $timeout) {
         this.modal = function (op) {
             var d = {
                 id: "ekathuwaModalID",
@@ -20,6 +20,7 @@ angular.module('ngEkathuwa', ['ngRoute'])
                 backdrop: true,
                 keyboard: true,
                 remote: false,
+                show: true,
                 modalClass: "fade",
                 role: "dialog",
                 contentStyle: null, //width:350px;heigth:400px;background-color:red;
@@ -49,7 +50,8 @@ angular.module('ngEkathuwa', ['ngRoute'])
             var btOPs = {
                 backdrop: op.backdrop,
                 keyboard: op.keyboard,
-                remote: op.remote
+                remote: op.remote,
+                show: op.show
             };
             //set current modal dom selector
             var modSelector = "#" + op.id + " .modal";
@@ -130,15 +132,14 @@ angular.module('ngEkathuwa', ['ngRoute'])
             angular.element('head').append('<style id="ekathuwaSt' + op.id + '">' + mq + '</style>');
             angular.element("#" + op.id).remove();
             var m = angular.element(t);
-            var body = $document.find('body');
-            body.append(m);
+            angular.element('body').append(m);
             $compile(m)(op.scope);
             if (op.templateURL !== null && op.templateURL !== '') {
                 $timeout(function () {
-                    angular.element(modSelector).modal(btOPs);
+                    return angular.element(modSelector).modal(btOPs);
                 }, 200);
             } else {
-                angular.element(modSelector).modal(btOPs);
+                return angular.element(modSelector).modal(btOPs);
             }
         };
         return this;

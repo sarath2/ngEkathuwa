@@ -10,6 +10,7 @@ ngEkathuwa
 ###### It is responsive...
 ###### Can be use custom sizes...
 ###### Working with templates...
+###### It used promisses when you need...
 
 #### Getting Start
 
@@ -33,6 +34,7 @@ Default options
 id:                (string)    "ekathuwaModalID"
 scope:                         $rootScope
 controller:        (string)    null
+show:              (boolean)   true
 backdrop:          (boolean)   true
 keyboard:          (boolean)   true
 remote:            (boolean)   false
@@ -123,6 +125,17 @@ footerSaveBtn:     (boolean)   false
         });
     }
 
+    //Modal in promisses
+    var ekathuwaModalPromise = $ekathuwa.modal({
+        id: "ekathuwaBodyPromiseId",
+        scope: $scope,
+        show: false,
+        bodyTemplateURL: 'modal-template-body.html'
+    });
+    $q.when(ekathuwaModalPromise).then(function (m) {
+        m.modal('show'); //for  hide => m.modal('hide');
+    });
+
 <table>
     <tr>
         <th width="10%">Option</th>
@@ -170,6 +183,22 @@ footerSaveBtn:     (boolean)   false
     <tr>
         <td colspan="3">
             <pre>$ekathuwa.modal({controller:"ekathuwaModalCtl"});</pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>show</code>
+        </td>
+        <td>
+            <code>default: true</code>
+        </td>
+        <td>Shows the modal when initialized.
+            <br/>You can show/hide modal using promisses.</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <pre>var p = $ekathuwa.modal({id:"modalPromisses",show:false});</pre>
+            <pre>$q.when(p).then(function (m) { m.modal('show'); });</pre>
         </td>
     </tr>
     <tr>
