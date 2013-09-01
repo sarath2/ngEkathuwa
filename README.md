@@ -32,7 +32,7 @@ Default options
 -------------------------
 id:                (string)    "ekathuwaModalID"
 scope:                         $rootScope
-controller:        (boolean)   null
+controller:        (string)    null
 backdrop:          (boolean)   true
 keyboard:          (boolean)   true
 remote:            (boolean)   false
@@ -52,6 +52,77 @@ footerTemplate:    (string)    null
 footerCloseBtn:    (boolean)   true
 footerSaveBtn:     (boolean)   false
 </pre>
+
+    //Basic Modal
+    $scope.ekathuwaModalBasic = function () {
+        $ekathuwa.modal({
+            id: "ekathuwaModalBasicId",
+            headerText:"Ekathuwa modal header",
+        });
+    }
+
+    //Fullscreen Modal
+    $scope.ekathuwaModalTemp = function () {
+        $ekathuwa.modal({
+            id: "ekathuwaModalTempId",
+            scope: $scope,
+            templateURL: "modal-template.html",
+            contentPreSize: "fl"
+        });
+    }
+
+    //Modal by template with stylish(350px width overwrite from 80%)
+    $scope.ekathuwaModalStyle = function () {
+        $ekathuwa.modal({
+            id: "ekathuwaModalTempId",
+            scope: $scope,
+            templateURL: "modal-template.html",
+            contentStyle: "width:350px;heigth:400px;background-color:#1b78f7;",
+            contentCustomSize: 80
+        });
+    }
+
+    //Large screen modal with inline html
+    $scope.ekathuwaModalTempHTML = function () {
+        $ekathuwa.modal({
+            id: "ekathuwaTemlHTMLId",
+            scope: $scope,
+            contentPreSize: "lg",
+            templateHTML: '<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="ekathuwaTemlHTMLId" style="display: none;"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button><h4 id="myModalLabel" class="modal-title">Ekathuwa Modal Heading</h4></div><div class="modal-body"><h4>Ekathuwa modal body.</h4><button class="btn btn-warning" ng-click="btnMsgFromCntl()">Get Message</button><div class="modal-footer"><button data-dismiss="modal" class="btn btn-default" type="button">Close</button><button class="btn btn-primary" type="button">Save changes</button></div></div></div></div>'
+        });
+    }
+
+    //Modal body from template and set header text
+    $scope.ekathuwaModalBodyTempURL = function () {
+        $ekathuwa.modal({
+            id: "ekathuwaBodyTempLId",
+            scope: $scope,
+            headerText:"Ekathuwa modal header",
+            bodyTemplateURL: 'modal-template-body.html'
+        });
+    }
+
+    //Footerless modal
+    $scope.ekathuwaModalFooterless = function () {
+        $ekathuwa.modal({
+            id: "ekathuwaBodyTempLId",
+            scope: $scope,
+            headerText:"Ekathuwa modal header",
+            bodyTemplateURL: 'modal-template-body.html',
+            footer:false
+        });
+    }
+
+    //Headerless modal
+    $scope.ekathuwaModalHeaderless = function () {
+        $ekathuwa.modal({
+            id: "ekathuwaBodyTempLId",
+            scope: $scope,
+            bodyTemplateURL: 'modal-template-body.html',
+            header:false
+        });
+    }
+
 <table>
     <tr>
         <th width="10%">Option</th>
