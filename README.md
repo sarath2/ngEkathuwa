@@ -1,9 +1,9 @@
 ngEkathuwa
 ==========
 
-#### Angularjs Bootstrap 3 Modal service - Ekathuwa 
+#### Angularjs Bootstrap 3 Modal service - Ekathuwa
 ==============================================
-[Examples: ngEkathuwa](http://plnkr.co/ebDtSMw6w0IZquaglEMe) 
+[Examples: ngEkathuwa](http://plnkr.co/ebDtSMw6w0IZquaglEMe)
 
 ###### This given you to easily handle Bootstrap 3 Modal window with Angularjs.
 ###### It is more flexible...
@@ -44,6 +44,7 @@ templateHTML:      (string)    null
 bodyTemplateURL:   (string)    null
 bodyTemplate:      (string)    null
 header:            (boolean)   true
+headerText:        (string)    null
 headerTemplate:    (string)    null
 headerCloseBtn:    (boolean)   true
 footer:            (boolean)   true
@@ -271,6 +272,20 @@ footerSaveBtn:     (boolean)   false
     <tr>
         <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, headerTemplate: 'This is a modal header' });</pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>headerText</code>
+        </td>
+        <td>
+            <code>default: null</code>
+        </td>
+        <td>Set header text.</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, headerText: "This is header" });</pre>
         </td>
     </tr>
     <tr>
