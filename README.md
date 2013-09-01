@@ -27,7 +27,30 @@ ngEkathuwa
 =============================
 
 ##### ngEkathuwa Options
-
+<pre>
+Default options
+-------------------------
+id:                (string)    "ekathuwaModalID"
+scope:                         $rootScope
+controller:        (boolean)   null
+backdrop:          (boolean)   true
+keyboard:          (boolean)   true
+remote:            (boolean)   false
+contentStyle:      (string)    null
+contentCustomSize: (number)    0
+contentPreSize:    (string)    "df", //df,sm,md,lg,fl
+templateURL:       (string)    null
+templateHTML:      (string)    null
+bodyTemplateURL:   (string)    null
+bodyTemplate:      (string)    null
+header:            (boolean)   true
+headerTemplate:    (string)    null
+headerCloseBtn:    (boolean)   true
+footer:            (boolean)   true
+footerTemplate:    (string)    null
+footerCloseBtn:    (boolean)   true
+footerSaveBtn:     (boolean)   false
+</pre>
 <table>
     <tr>
         <th width="10%">Option</th>
