@@ -30,6 +30,7 @@ angular.module('ngEkathuwa', ['ngRoute'])
                 bodyTemplateURL: null,
                 bodyTemplate: null,
                 header: true,
+                headerText: null,
                 headerTemplate: null,
                 headerCloseBtn: true,
                 footer: true,
@@ -80,8 +81,13 @@ angular.module('ngEkathuwa', ['ngRoute'])
                         if (op.headerTemplate !== null && op.headerTemplate !== '') {
                             h = '<div class="modal-header">' + op.headerTemplate + '<div>';
                         } else {
+                            var ht = '';
+                            //set header text
+                            if (op.headerText !== null && op.headerText !== '') {
+                                ht = '<h4 id="myModalLabel" class="modal-title">' + op.headerText + '</h4>';
+                            }
                             //set modal default header
-                            h = '<div class="modal-header"><button ng-if="' + op.headerCloseBtn + '" aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button><h4 id="myModalLabel" class="modal-title">Modal Heading</h4></div>';
+                            h = '<div class="modal-header"><button ng-if="' + op.headerCloseBtn + '" aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button>' + ht + '</div>';
                         }
                     }
                     //set modal footer HTML

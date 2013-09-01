@@ -5,8 +5,8 @@
   "keywords": [
     "angular","bootstrap"
   ],
-  "homepage": "https://github.com/sarath2",
-  "bugs": "https://github.com/sarath2",
+  "homepage": "https://github.com/sarath2/ngEkathuwa",
+  "bugs": "https://github.com/sarath2/ngEkathuwa/issues",
   "author": {
     "name": "Sarath Ambegoda",
     "email": "sarath2mail@gmail.com",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sarath2"
+    "url": "https://github.com/sarath2/ngEkathuwa.git"
   },
   "licenses": [
     {
