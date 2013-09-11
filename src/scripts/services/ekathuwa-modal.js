@@ -11,7 +11,7 @@ angular.module('ngEkathuwa', ['ngRoute'])
     $rootScope.$ekathuwa = $ekathuwa;
 })
     .provider('$ekathuwa', function () {
-    this.$get = function ($compile, $rootScope, $timeout) {
+    this.$get = function ($compile, $rootScope, $timeout, $q) {
         this.modal = function (op) {
             var d = {
                 id: "ekathuwaModalID",
@@ -134,13 +134,15 @@ angular.module('ngEkathuwa', ['ngRoute'])
             var m = angular.element(t);
             angular.element('body').append(m);
             $compile(m)(op.scope);
+            var deferred = $q.defer();
             if (op.templateURL !== null && op.templateURL !== '') {
                 $timeout(function () {
-                    return angular.element(modSelector).modal(btOPs);
+                    deferred.resolve(angular.element(modSelector).modal(btOPs));
                 }, 200);
             } else {
-                return angular.element(modSelector).modal(btOPs);
+                deferred.resolve(angular.element(modSelector).modal(btOPs));
             }
+            return deferred.promise;
         };
         return this;
     }
