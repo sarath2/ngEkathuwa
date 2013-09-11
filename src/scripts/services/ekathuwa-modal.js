@@ -142,6 +142,7 @@ angular.module('ngEkathuwa', ['ngRoute'])
             } else {
                 deferred.resolve(angular.element(modSelector).modal(btOPs));
             }
+            return deferred.promise;
         };
         return this;
     }
