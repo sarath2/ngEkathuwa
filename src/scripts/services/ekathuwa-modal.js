@@ -1,6 +1,6 @@
 /**
  * ekathuwa
- * @version v0.1.0 - 2013-08-31
+ * @version v0.1.2 - 2013-09-11
  * @link https://github.com/sarath2
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -11,7 +11,7 @@ angular.module('ngEkathuwa', ['ngRoute'])
     $rootScope.$ekathuwa = $ekathuwa;
 })
     .provider('$ekathuwa', function () {
-    this.$get = function ($compile, $rootScope, $timeout) {
+    this.$get = function ($compile, $rootScope, $timeout, $q) {
         this.modal = function (op) {
             var d = {
                 id: "ekathuwaModalID",
@@ -32,9 +32,11 @@ angular.module('ngEkathuwa', ['ngRoute'])
                 bodyTemplate: null,
                 header: true,
                 headerText: null,
+                headerClass: "",
                 headerTemplate: null,
                 headerCloseBtn: true,
                 footer: true,
+                footerClass: "",
                 footerTemplate: null,
                 footerCloseBtn: true,
                 footerSaveBtn: false
@@ -81,7 +83,7 @@ angular.module('ngEkathuwa', ['ngRoute'])
                     //set modal header HTML
                     if (op.header) {
                         if (op.headerTemplate !== null && op.headerTemplate !== '') {
-                            h = '<div class="modal-header">' + op.headerTemplate + '<div>';
+                            h = '<div class="modal-header ' + op.headerClass + '">' + op.headerTemplate + '<div>';
                         } else {
                             var ht = '';
                             //set header text
@@ -89,16 +91,16 @@ angular.module('ngEkathuwa', ['ngRoute'])
                                 ht = '<h4 id="myModalLabel" class="modal-title">' + op.headerText + '</h4>';
                             }
                             //set modal default header
-                            h = '<div class="modal-header"><button ng-if="' + op.headerCloseBtn + '" aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button>' + ht + '</div>';
+                            h = '<div class="modal-header ' + op.headerClass + '"><button ng-if="' + op.headerCloseBtn + '" aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button>' + ht + '</div>';
                         }
                     }
                     //set modal footer HTML
                     if (op.footer) {
                         if (op.footerTemplate !== null && op.footerTemplate !== '') {
-                            f = '<div class="modal-footer">' + op.footerTemplate + '<div>';
+                            f = '<div class="modal-footer ' + op.footerClass + '">' + op.footerTemplate + '<div>';
                         } else {
                             //set modal default footer
-                            f = '<div class="modal-footer"><button ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">Close</button><button ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">Save changes</button></div>';
+                            f = '<div class="modal-footer ' + op.footerClass + '"><button ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">Close</button><button ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">Save changes</button></div>';
                         }
                     }
                     t = a + '<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="myModal" style="display: none;"><div class="modal-dialog"><div class="modal-content">' + h + b + f + '</div></div></div></div>';
@@ -134,14 +136,16 @@ angular.module('ngEkathuwa', ['ngRoute'])
             var m = angular.element(t);
             angular.element('body').append(m);
             $compile(m)(op.scope);
+            var deferred = $q.defer();
             if (op.templateURL !== null && op.templateURL !== '') {
                 $timeout(function () {
-                    return angular.element(modSelector).modal(btOPs);
+                    deferred.resolve(angular.element(modSelector).modal(btOPs));
                 }, 200);
             } else {
-                return angular.element(modSelector).modal(btOPs);
+                deferred.resolve(angular.element(modSelector).modal(btOPs));
             }
+            return deferred.promise;
         };
         return this;
-    }
+    };
 });

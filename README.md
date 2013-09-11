@@ -1,4 +1,4 @@
-ngEkathuwa
+ngEkathuwa - v0.1.2
 ==========
 
 #### Angularjs Bootstrap 3 Modal service - Ekathuwa
@@ -11,6 +11,7 @@ ngEkathuwa
 ###### Can be use custom sizes...
 ###### Working with templates...
 ###### It used promisses when you need...
+###### You can dynamically show/hide...
 
 #### Getting Start
 
@@ -24,7 +25,7 @@ ngEkathuwa
 
 
 
-#### Ekathuwa API and exampls
+#### Ekathuwa API and examples
 =============================
 
 ##### ngEkathuwa Options
@@ -46,10 +47,12 @@ templateHTML:      (string)    null
 bodyTemplateURL:   (string)    null
 bodyTemplate:      (string)    null
 header:            (boolean)   true
+headerClass:       (string)    " "  //css style class
 headerText:        (string)    null
 headerTemplate:    (string)    null
 headerCloseBtn:    (boolean)   true
 footer:            (boolean)   true
+footerClass:       (string)    " "  //css style class
 footerTemplate:    (string)    null
 footerCloseBtn:    (boolean)   true
 footerSaveBtn:     (boolean)   false
@@ -125,16 +128,31 @@ footerSaveBtn:     (boolean)   false
         });
     }
 
-    //Modal in promisses
-    var ekathuwaModalPromise = $ekathuwa.modal({
-        id: "ekathuwaBodyPromiseId",
-        scope: $scope,
-        show: false,
-        bodyTemplateURL: 'modal-template-body.html'
-    });
-    $q.when(ekathuwaModalPromise).then(function (m) {
-        m.modal('show'); //for  hide => m.modal('hide');
-    });
+    //Header/Footer stylish from css class modal
+    //Usefull for set your all modals header to same style
+    $scope.ekathuwaModalHeaderless = function () {
+        $ekathuwa.modal({
+            id: "ekathuwaBodyTempLId",
+            scope: $scope,
+            bodyTemplateURL: 'modal-template-body.html',
+            headerClass : "ribbon blue",  //set your css class
+            footerClass : "color-footer blue"  //set your css class
+        });
+    }
+
+    //Modal via template body Url and show hide with promisess
+    $scope.ekathuwaModalPromisses = function () {
+       var promise = $ekathuwa.modal({
+            id: "ekathuwaPromisId",
+            show: false,
+            scope: $scope,
+            bodyTemplateURL: 'modal-template-body.html',
+            headerText:"Modal with promisses"
+        });
+        promise.then(function (elem) {
+            elem.modal('show');
+        });
+    }
 
 <table>
     <tr>
