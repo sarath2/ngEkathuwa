@@ -83,7 +83,7 @@ angular.module('ngEkathuwa', ['ngRoute'])
                     //set modal header HTML
                     if (op.header) {
                         if (op.headerTemplate !== null && op.headerTemplate !== '') {
-                            h = '<div class="modal-header ' + op.headerClass + '">' + op.headerTemplate + '<div>';
+                            h = '<div class="modal-header ' + op.headerClass + '">' + op.headerTemplate + '</div>';
                         } else {
                             var ht = '';
                             //set header text
@@ -97,7 +97,7 @@ angular.module('ngEkathuwa', ['ngRoute'])
                     //set modal footer HTML
                     if (op.footer) {
                         if (op.footerTemplate !== null && op.footerTemplate !== '') {
-                            f = '<div class="modal-footer ' + op.footerClass + '">' + op.footerTemplate + '<div>';
+                            f = '<div class="modal-footer ' + op.footerClass + '">' + op.footerTemplate + '</div>';
                         } else {
                             //set modal default footer
                             f = '<div class="modal-footer ' + op.footerClass + '"><button ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">Close</button><button ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">Save changes</button></div>';

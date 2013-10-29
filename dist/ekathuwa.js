@@ -1,6 +1,6 @@
 /**
  * ekathuwa
- * @version v0.1.2 - 2013-09-11
+ * @version v0.1.3 - 2013-10-29
  * @link https://github.com/sarath2/ngEkathuwa
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -78,7 +78,7 @@
               }
               if (op.header) {
                 if (op.headerTemplate !== null && op.headerTemplate !== '') {
-                  h = '<div class="modal-header ' + op.headerClass + '">' + op.headerTemplate + '<div>';
+                  h = '<div class="modal-header ' + op.headerClass + '">' + op.headerTemplate + '</div>';
                 } else {
                   var ht = '';
                   if (op.headerText !== null && op.headerText !== '') {
@@ -89,7 +89,7 @@
               }
               if (op.footer) {
                 if (op.footerTemplate !== null && op.footerTemplate !== '') {
-                  f = '<div class="modal-footer ' + op.footerClass + '">' + op.footerTemplate + '<div>';
+                  f = '<div class="modal-footer ' + op.footerClass + '">' + op.footerTemplate + '</div>';
                 } else {
                   f = '<div class="modal-footer ' + op.footerClass + '"><button ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">Close</button><button ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">Save changes</button></div>';
                 }
