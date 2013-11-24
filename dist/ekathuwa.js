@@ -1,14 +1,14 @@
 /**
  * ekathuwa
- * @version v0.1.3 - 2013-10-29
+ * @version v0.2.0 - 2013-11-24
  * @link https://github.com/sarath2/ngEkathuwa
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 (function (window, document, undefined) {
   'use strict';
-  angular.module('ngEkathuwa', ['ngRoute']);
-  angular.module('ngEkathuwa', ['ngRoute']).run([
+  angular.module('ngEkathuwa', []);
+  angular.module('ngEkathuwa', []).run([
     '$rootScope',
     '$ekathuwa',
     function ($rootScope, $ekathuwa) {
@@ -84,7 +84,7 @@
                   if (op.headerText !== null && op.headerText !== '') {
                     ht = '<h4 id="myModalLabel" class="modal-title">' + op.headerText + '</h4>';
                   }
-                  h = '<div class="modal-header ' + op.headerClass + '"><button ng-if="' + op.headerCloseBtn + '" aria-hidden="true" data-dismiss="modal" class="close" type="button">x</button>' + ht + '</div>';
+                  h = '<div class="modal-header ' + op.headerClass + '"><button ng-if="' + op.headerCloseBtn + '" aria-hidden="true" data-dismiss="modal" class="close" type="button">\xd7</button>' + ht + '</div>';
                 }
               }
               if (op.footer) {
@@ -130,7 +130,7 @@
           if (op.templateURL !== null && op.templateURL !== '') {
             $timeout(function () {
               deferred.resolve(angular.element(modSelector).modal(btOPs));
-            }, 200);
+            }, 300);
           } else {
             deferred.resolve(angular.element(modSelector).modal(btOPs));
           }

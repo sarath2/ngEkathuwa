@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('ngEkathuwa', ['ngRoute']);
+angular.module('ngEkathuwa', []);
