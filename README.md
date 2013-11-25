@@ -465,6 +465,20 @@ footerSaveBtn:     (boolean)   false
     </tr>
     <tr>
         <td>
+            <code>footerCloseBtnText</code>
+        </td>
+        <td>
+            <code>default: 'Close'</code>
+        </td>
+        <td>Close button text.</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footerCloseBtn: true, footerCloseBtnText: 'OK' });</pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
             <code>footerSaveBtn</code>
         </td>
         <td>
@@ -475,6 +489,20 @@ footerSaveBtn:     (boolean)   false
     <tr>
         <td colspan="3">
             <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footerSaveBtn: true });</pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>footerSaveBtnText</code>
+        </td>
+        <td>
+            <code>default: 'Save changes'</code>
+        </td>
+        <td>Save button text.</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <pre>$ekathuwa.modal({ id: "ekathuwaModalId", scope: $scope, footerSaveBtn: true, footerSaveBtnText: 'Save' });</pre>
         </td>
     </tr>
 </table>
