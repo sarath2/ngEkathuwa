@@ -56,7 +56,9 @@ footer:            (boolean)   true
 footerClass:       (string)    " "  //css style class
 footerTemplate:    (string)    null
 footerCloseBtn:    (boolean)   true
+footerCloseBtnText:(string)    "Close"
 footerSaveBtn:     (boolean)   false
+footerSaveBtnText: (string)    "Save changes"
 </pre>
 
     //Basic Modal
