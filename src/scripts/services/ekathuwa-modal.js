@@ -39,7 +39,9 @@ angular.module('ngEkathuwa', [])
                     footerClass: "",
                     footerTemplate: null,
                     footerCloseBtn: true,
-                    footerSaveBtn: false
+                    footerCloseBtnText: 'Close',
+                    footerSaveBtn: false,
+                    footerSaveBtnText: 'Save changes'
                 };
                 var t = '',
                     s = '',
@@ -100,7 +102,7 @@ angular.module('ngEkathuwa', [])
                                 f = '<div class="modal-footer ' + op.footerClass + '">' + op.footerTemplate + '</div>';
                             } else {
                                 //set modal default footer
-                                f = '<div class="modal-footer ' + op.footerClass + '"><button ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">Close</button><button ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">Save changes</button></div>';
+                                f = '<div class="modal-footer ' + op.footerClass + '"><button ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">' + op.footerCloseBtnText + '</button><button ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">' + op.footerSaveBtnText + '</button></div>';
                             }
                         }
                         t = a + '<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="myModal" style="display: none;"><div class="modal-dialog"><div class="modal-content">' + h + b + f + '</div></div></div></div>';

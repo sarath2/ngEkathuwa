@@ -1,6 +1,6 @@
 /**
  * ekathuwa
- * @version v0.2.0 - 2013-11-24
+ * @version v0.2.0 - 2013-11-25
  * @link https://github.com/sarath2/ngEkathuwa
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -48,7 +48,9 @@
               footerClass: '',
               footerTemplate: null,
               footerCloseBtn: true,
-              footerSaveBtn: false
+              footerCloseBtnText: 'Close',
+              footerSaveBtn: false,
+              footerSaveBtnText: 'Save changes'
             };
           var t = '', s = '', c = '', b = '', f = '', h = '';
           op = angular.extend(d, op);
@@ -91,7 +93,7 @@
                 if (op.footerTemplate !== null && op.footerTemplate !== '') {
                   f = '<div class="modal-footer ' + op.footerClass + '">' + op.footerTemplate + '</div>';
                 } else {
-                  f = '<div class="modal-footer ' + op.footerClass + '"><button ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">Close</button><button ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">Save changes</button></div>';
+                  f = '<div class="modal-footer ' + op.footerClass + '"><button ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">' + op.footerCloseBtnText + '</button><button ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">' + op.footerSaveBtnText + '</button></div>';
                 }
               }
               t = a + '<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="myModal" style="display: none;"><div class="modal-dialog"><div class="modal-content">' + h + b + f + '</div></div></div></div>';
