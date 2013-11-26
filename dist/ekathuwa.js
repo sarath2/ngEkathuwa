@@ -1,6 +1,6 @@
 /**
  * ekathuwa
- * @version v0.2.0 - 2013-11-25
+ * @version v0.2.0 - 2013-11-26
  * @link https://github.com/sarath2/ngEkathuwa
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -61,16 +61,16 @@
               show: op.show
             };
           var modSelector = '#' + op.id + ' .modal';
-          c = op.controller ? 'ng-controller=' + op.controller : '';
+          c = op.controller ? 'data-ng-controller=' + op.controller : '';
           if (op.templateURL !== null && op.templateURL !== '') {
-            t = '<div ' + c + ' id="' + op.id + '" ng-include="\'' + op.templateURL + '\'"></div>';
+            t = '<div ' + c + ' id="' + op.id + '" data-ng-include="\'' + op.templateURL + '\'"></div>';
           } else {
             var a = '<div ' + c + ' id="' + op.id + '">';
             if (op.templateHTML !== null && op.templateHTML !== '') {
               t = a + op.templateHTML + '</div>';
             } else {
               if (op.bodyTemplateURL !== null && op.bodyTemplateURL !== '') {
-                b = '<div class="modal-body" ng-include="\'' + op.bodyTemplateURL + '\'"></div>';
+                b = '<div class="modal-body" data-ng-include="\'' + op.bodyTemplateURL + '\'"></div>';
               } else {
                 if (op.bodyTemplate !== null && op.bodyTemplate !== '') {
                   b = '<div class="modal-body">' + op.bodyTemplate + '</div>';
@@ -86,14 +86,14 @@
                   if (op.headerText !== null && op.headerText !== '') {
                     ht = '<h4 id="myModalLabel" class="modal-title">' + op.headerText + '</h4>';
                   }
-                  h = '<div class="modal-header ' + op.headerClass + '"><button ng-if="' + op.headerCloseBtn + '" aria-hidden="true" data-dismiss="modal" class="close" type="button">\xd7</button>' + ht + '</div>';
+                  h = '<div class="modal-header ' + op.headerClass + '"><button data-ng-if="' + op.headerCloseBtn + '" aria-hidden="true" data-dismiss="modal" class="close" type="button">\xd7</button>' + ht + '</div>';
                 }
               }
               if (op.footer) {
                 if (op.footerTemplate !== null && op.footerTemplate !== '') {
                   f = '<div class="modal-footer ' + op.footerClass + '">' + op.footerTemplate + '</div>';
                 } else {
-                  f = '<div class="modal-footer ' + op.footerClass + '"><button ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">' + op.footerCloseBtnText + '</button><button ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">' + op.footerSaveBtnText + '</button></div>';
+                  f = '<div class="modal-footer ' + op.footerClass + '"><button data-ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">' + op.footerCloseBtnText + '</button><button data-ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">' + op.footerSaveBtnText + '</button></div>';
                 }
               }
               t = a + '<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="myModal" style="display: none;"><div class="modal-dialog"><div class="modal-content">' + h + b + f + '</div></div></div></div>';
