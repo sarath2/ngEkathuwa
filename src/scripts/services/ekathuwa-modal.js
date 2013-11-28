@@ -60,10 +60,10 @@ angular.module('ngEkathuwa', [])
                 //set current modal dom selector
                 var modSelector = "#" + op.id + " .modal";
                 //Set controller
-                c = op.controller ? 'ng-controller=' + op.controller : '';
+                c = op.controller ? 'data-ng-controller=' + op.controller : '';
                 //set modal by temp URL
                 if (op.templateURL !== null && op.templateURL !== '') {
-                    t = '<div ' + c + ' id="' + op.id + '" ng-include="\'' + op.templateURL + '\'"></div>';
+                    t = '<div ' + c + ' id="' + op.id + '" data-ng-include="\'' + op.templateURL + '\'"></div>';
                 } else {
                     var a = '<div ' + c + ' id="' + op.id + '">';
                     //set modal by temp HTML
@@ -72,7 +72,7 @@ angular.module('ngEkathuwa', [])
                     } else {
                         //set modal body by temp URL
                         if (op.bodyTemplateURL !== null && op.bodyTemplateURL !== '') {
-                            b = '<div class="modal-body" ng-include="\'' + op.bodyTemplateURL + '\'"></div>';
+                            b = '<div class="modal-body" data-ng-include="\'' + op.bodyTemplateURL + '\'"></div>';
                         } else {
                             //set modal body by temp HTML
                             if (op.bodyTemplate !== null && op.bodyTemplate !== '') {
@@ -93,7 +93,7 @@ angular.module('ngEkathuwa', [])
                                     ht = '<h4 id="myModalLabel" class="modal-title">' + op.headerText + '</h4>';
                                 }
                                 //set modal default header
-                                h = '<div class="modal-header ' + op.headerClass + '"><button ng-if="' + op.headerCloseBtn + '" aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>' + ht + '</div>';
+                                h = '<div class="modal-header ' + op.headerClass + '"><button data-ng-if="' + op.headerCloseBtn + '" aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>' + ht + '</div>';
                             }
                         }
                         //set modal footer HTML
@@ -102,7 +102,7 @@ angular.module('ngEkathuwa', [])
                                 f = '<div class="modal-footer ' + op.footerClass + '">' + op.footerTemplate + '</div>';
                             } else {
                                 //set modal default footer
-                                f = '<div class="modal-footer ' + op.footerClass + '"><button ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">' + op.footerCloseBtnText + '</button><button ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">' + op.footerSaveBtnText + '</button></div>';
+                                f = '<div class="modal-footer ' + op.footerClass + '"><button data-ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">' + op.footerCloseBtnText + '</button><button data-ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">' + op.footerSaveBtnText + '</button></div>';
                             }
                         }
                         t = a + '<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="myModal" style="display: none;"><div class="modal-dialog"><div class="modal-content">' + h + b + f + '</div></div></div></div>';
