@@ -1,9 +1,9 @@
 {
   "name": "ekathuwa",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Ekathuwa Angular Bootstrap3 modal service",
   "keywords": [
-    "angular","bootstrap"
+    "angular","bootstrap","modal"
   ],
   "homepage": "https://github.com/sarath2/ngEkathuwa",
   "bugs": "https://github.com/sarath2/ngEkathuwa/issues",

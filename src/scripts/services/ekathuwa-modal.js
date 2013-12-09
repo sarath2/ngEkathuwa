@@ -1,6 +1,6 @@
 /**
  * ekathuwa
- * @version v0.2.0 - 2013-11-26
+ * @version v0.2.1 - 2013-12-09
  * @link https://github.com/sarath2/ngEkathuwa
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -116,7 +116,7 @@
                                 s = s + ';width:75%;';
                                 break;
                             case 'fl':
-                                s = s + ';width:100%;';
+                                s = s + ';width:98%;';
                                 break;
                             default:
                                 break;

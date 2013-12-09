@@ -1,4 +1,4 @@
-ngEkathuwa - v0.2.0
+ngEkathuwa - v0.2.1
 ==========
 
 #### Angularjs Bootstrap 3 Modal service - Ekathuwa
@@ -19,7 +19,7 @@ ngEkathuwa - v0.2.0
 2. Include `<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>`
 3. Include `<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"></script>`
 4. Include ` <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>`
-5. Then include `ekathuwa.min.js`
+5. Then include `ekathuwa.min.js` (bower install ngEkathuwa)
 6. Declare a module dependency, in your module `'[ngEkathuwa']`
 7. Declare a controller dependency, in your controller `$ekathuwa`
 8. Then use it `$ekathuwa.modal(options)`
