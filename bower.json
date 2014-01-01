@@ -12,6 +12,10 @@
   "authors": [
     "sarath2 <sarath2mail@gmail.com>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sarath2/ngEkathuwa.git"
+  },
   "description": "Angularjs Bootstrap 3 Modal service - ngEkathuwa",
   "main": "./dist/ekathuwa.js",
   "keywords": [
