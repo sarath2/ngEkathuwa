@@ -20,7 +20,7 @@ ngEkathuwa - v0.2.1
 3. Include `<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"></script>`
 4. Include ` <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>`
 5. Then include `ekathuwa.min.js` (bower install ngEkathuwa)
-6. Declare a module dependency, in your module `'[ngEkathuwa']`
+6. Declare a module dependency, in your module `'[ngEkathuwa]'`
 7. Declare a controller dependency, in your controller `$ekathuwa`
 8. Then use it `$ekathuwa.modal(options)`
 
