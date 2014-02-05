@@ -517,3 +517,7 @@ footerSaveBtnText: (string)    "Save changes"
 ### License
 
 Copyright 2013 Sarath Ambegoda. Released under the [MIT License (MIT)](LICENSE).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sarath2/ngekathuwa/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
