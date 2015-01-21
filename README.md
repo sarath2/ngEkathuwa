@@ -1,4 +1,4 @@
-ngEkathuwa - v0.2.2
+ngEkathuwa - v0.2.3
 ==========
 
 #### Angularjs Bootstrap 3 Modal service - Ekathuwa
