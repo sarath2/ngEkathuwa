@@ -129,7 +129,6 @@
                             break;
                         }
                         var mq = '#' + op.id + ' .modal-dialog { ' + s + '} @media (max-width: 768px) {' + '#' + op.id + ' .modal-dialog {width:90%;}}';
-                        //angular.element('.modal-backdrop').remove();
                         angular.element('#ekathuwaSt' + op.id).remove();
                         angular.element('head').append('<style id="ekathuwaSt' + op.id + '">' + mq + '</style>');
                         angular.element('#' + op.id).remove();
