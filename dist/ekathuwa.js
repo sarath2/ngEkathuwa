@@ -129,15 +129,10 @@
                             break;
                         }
                         var mq = '#' + op.id + ' .modal-dialog { ' + s + '} @media (max-width: 768px) {' + '#' + op.id + ' .modal-dialog {width:90%;}}';
+                        angular.element('.modal-backdrop').remove();
                         angular.element('#ekathuwaSt' + op.id).remove();
                         angular.element('head').append('<style id="ekathuwaSt' + op.id + '">' + mq + '</style>');
                         angular.element('#' + op.id).remove();
-                        var els = angular.element('.modal-backdrop');
-                        angular.forEach(els, function (el, index) {
-                            if (index !== 0) {
-                                angular.element(el).remove();
-                            }
-                        });
                         var m = angular.element(t);
                         angular.element('body').append(m);
                         var deferred = $q.defer();
