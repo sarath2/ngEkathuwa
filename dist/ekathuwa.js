@@ -1,6 +1,6 @@
 /**
  * ekathuwa
- * @version v0.2.2 - 2015-01-21
+ * @version v0.2.5 - 2015-01-22
  * @link https://github.com/sarath2/ngEkathuwa
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
