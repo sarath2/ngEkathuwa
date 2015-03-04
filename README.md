@@ -52,6 +52,7 @@ headerClass:       (string)    " "  //css style class
 headerText:        (string)    null
 headerTemplate:    (string)    null
 headerCloseBtn:    (boolean)   true
+headerDraggable:   (boolean)   true
 footer:            (boolean)   true
 footerClass:       (string)    " "  //css style class
 footerTemplate:    (string)    null
