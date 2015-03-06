@@ -1,6 +1,6 @@
 /**
  * ekathuwa
- * @version v0.2.5 - 2015-03-04
+ * @version v0.2.7 - 2015-03-06
  * @link https://github.com/sarath2/ngEkathuwa
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -151,7 +151,7 @@
             })
             .directive('draggable', function ($document) {
                 return function (scope, element) {
-                    angular.element(".modal").draggable({
+                    angular.element(".modal-dialog").draggable({
                         handle: ".modal-header"
                     });
                 };
