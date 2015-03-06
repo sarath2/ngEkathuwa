@@ -1,6 +1,6 @@
 /**
  * ekathuwa
- * @version v0.2.7 - 2015-03-06
+ * @version v0.2.8 - 2015-03-06
  * @link https://github.com/sarath2/ngEkathuwa
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -151,8 +151,16 @@
             })
             .directive('draggable', function ($document) {
                 return function (scope, element) {
+                    var backDropHeight = 0;
                     angular.element(".modal-dialog").draggable({
-                        handle: ".modal-header"
+                        handle: ".modal-header",
+                        stop: function (event, ui) {
+                            var backDropElements = document.getElementsByClassName('modal-backdrop');
+                            for (var x = 0; x < backDropElements.length; x++) {
+                                backDropHeight = backDropHeight == 0 ? backDropElements[x].clientHeight : backDropHeight;
+                                backDropElements[x].style.height = (backDropHeight + ui.offset.top + 2) + "px";
+                            }
+                        }
                     });
                 };
             });
