@@ -73,7 +73,7 @@
                             if (op.templateURL !== null && op.templateURL !== '') {
                                 t = '<div ' + (op.headerDraggable ? 'draggable' : '') + c + ' id="' + op.id + '" data-ng-include="\'' + op.templateURL + '\'" onload="ekathuaLoaded()"></div>';
                             } else {
-                                var a = '<div ' + c + ' id="' + op.id + '">';
+                                var a = '<div '+ (op.headerDraggable ? 'draggable' : '') + c + ' id="' + op.id + '">';
                                 if (op.templateHTML !== null && op.templateHTML !== '') {
                                     t = a + op.templateHTML + '</div>';
                                 } else {
