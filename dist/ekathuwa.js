@@ -1,6 +1,6 @@
 /**
  * ekathuwa
- * @version v0.2.8 - 2015-03-06
+ * @version v0.3.0 - 2015-03-26
  * @link https://github.com/sarath2/ngEkathuwa
  * @author Sarath Ambegoda <sarath2mail@gmail.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -71,9 +71,9 @@
                             var modSelector = '#' + op.id + ' .modal';
                             c = op.controller ? 'data-ng-controller=' + op.controller : '';
                             if (op.templateURL !== null && op.templateURL !== '') {
-                                t = '<div ' + (op.headerDraggable ? 'draggable' : '') + c + ' id="' + op.id + '" data-ng-include="\'' + op.templateURL + '\'" onload="ekathuaLoaded()"></div>';
+                                t = '<div ' + (op.headerDraggable ? 'draggable=""' : '') + c + ' id="' + op.id + '" data-ng-include="\'' + op.templateURL + '\'" onload="ekathuaLoaded()"></div>';
                             } else {
-                                var a = '<div ' + (op.headerDraggable ? 'draggable' : '') + c + ' id="' + op.id + '">';
+                                var a = '<div ' + (op.headerDraggable ? 'draggable=""' : '') + c + ' id="' + op.id + '">';
                                 if (op.templateHTML !== null && op.templateHTML !== '') {
                                     t = a + op.templateHTML + '</div>';
                                 } else {
@@ -104,7 +104,7 @@
                                             f = '<div class="modal-footer ' + op.footerClass + '"><button data-ng-if="' + op.footerCloseBtn + '" data-dismiss="modal" class="btn btn-default" type="button">' + op.footerCloseBtnText + '</button><button data-ng-if="' + op.footerSaveBtn + '" class="btn btn-primary" type="button">' + op.footerSaveBtnText + '</button></div>';
                                         }
                                     }
-                                    t = a + '<div ' + (op.headerDraggable ? 'draggable' : '') + ' aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="myModal" style="display: none;"><div class="modal-dialog"><div class="modal-content">' + h + b + f + '</div></div></div></div>';
+                                    t = a + '<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="myModal" style="display: none;"><div class="modal-dialog"><div class="modal-content">' + h + b + f + '</div></div></div></div>';
                                 }
                             }
                             if (op.contentStyle !== null && op.contentStyle !== '') {
